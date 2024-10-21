@@ -3,6 +3,12 @@
 Hier finden Sie das offizielle Handbuch zu QuickDocs, pro Release getrennt.
 Bei Fragen, Problemen oder Anregungen zur Dokumentation kommen Sie gerne direkt auf uns zu.
 
+**Aktuelle Version**
+
+| Administration                      | Integration                               | Release Notes |
+| ----------------------------------- | ----------------------------------------- | ------------- |
+| [📗 Öffnen](./latest/admin/_toc.md) | [📘 Öffnen](./latest/integration/_toc.md) | keine         |
+
 **Alpha Versionen**
 Versionen &lt; 1 sind sog. Alpha-Versionen. Die Dokumentation zu diesen ist noch nicht vollständig vorhanden.
 
