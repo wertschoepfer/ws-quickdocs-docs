@@ -1,11 +1,20 @@
-# Anleitung für die Einrichtung von QuickDocs mit Docker auf Windows
+# Anleitung für die Einrichtung von QuickDocs mit Docker auf Linux Servern
 
-Beschrieben ist die besipielhafte Einrichtung als Docker-Service auf einem beliebigen Windows PC.  
-Dies ist insb. zum Testen der Anwendung und der Nutzung von Docker gedacht.
+Beschrieben ist die besipielhafte Einrichtung als Docker-Service auf einem Ubuntu Server.
 
 Siehe auch [🌐 die offizielle Dokumentation von Docker](https://docs.docker.com/manuals/).
 
 [🔙 Zurück zur Übersicht](_toc.md)
+
+// TODO:
+// TODO:
+// TODO:
+// TODO:
+// TODO:
+// TODO:
+// TODO:
+// TODO:
+// TODO:
 
 ## Voraussetzungen
 
@@ -111,20 +120,6 @@ Der genaue Pfad zur Lizenz kann in den [📄 Settings](settings.md) definiert we
 
 Ist der **Datenordner** vorbereitet, die **Konfiguration** gesetzt und die **Datenbank** erstellt kann QuickDocs gestartet werden.  
 -> `C:\QuickDocs\: docker compose up -d quickdocs`
-
-### Warnungen beim Starten
-
-Üblicherweise werden beim Starten von QuickDocs 2 Warnungen ausgegeben (sowohl in der Konsole, als auch im Log).  
-Die Meldungen sind nicht relevant für die Ausführung von QuickDocs und können ignoriert werden.
-
-**Beispiel:**
-
-```
-Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container.
-Protected data will be unavailable when container is destroyed. For more information go to https://aka.ms/aspnet/dataprotectionwarning
-
-No XML encryptor configured. Key {212da261-ee3d-4de8-827c-1afeaa63f0a7} may be persisted to storage in unencrypted form.
-```
 
 ## Testen & Debuggen im Browser
 
