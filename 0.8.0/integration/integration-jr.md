@@ -33,7 +33,7 @@ Will man den Zwischenschritt der PHP nicht und arbeitet direkt im Dialog mit ein
 Die PHP-Funktion enthält oben eine empfohlenen Vorschlag für `execute` und unten eine Klasse, die in `execute` verwendet wird.  
 Empfohlen wird, den unteren Bereich nicht zu ändern, da dieser bei Updates dann einfach ausgetauscht werden kann.  
 Der obere Bereich kann und sollte nach den Anforderungen des Prozesses entsprechend angepasst werden,  
-beispielsweise kann hier das vom Dialog übergegeben Mapping angepasst werden.
+beispielsweise kann hier das vom Dialog übergegeben Mapping beim Verarbeiten von Dokumenten angepasst werden.
 
 Hat man vor, mehrere PHP-Funktionen für quickDocs zu nutzen, dann kann man auch die Klasse auslagern.  
 Wir empfehlen dafür einen separaten Hilfsprozess.
@@ -56,6 +56,8 @@ Wir empfehlen dafür einen separaten Hilfsprozess.
 
 ## Füllen einer Word-Vorlage im Dialog mit Anzeige in Integration rechts
 
+Siehe [📄 Verwendung und Funktionen der REST-API > Dokumentenverarbeitung](api.md#dokumentenverarbeitung).
+
 Die Prozesse müssen Mapping-Informationen (JSON) bereitstellen, diese an die REST-API schicken und dann die Ergebnisdateien (binär oder base64) verarbeiten.
 
 In einem bestehenden Dialog wird ein FILE-Dialogelement erstellt.  
@@ -74,8 +76,6 @@ QuickDocs.process(
     mapping // Mapping-Objekt
 );
 ```
-
-Das Mapping-Objekt muss entsprechend der [📄 Dokumentenverarbeitung der API](api.md#dokumentenverarbeitung) sein.
 
 Zusätzlich dazu kann auch der `successCallback`, der `errorCallback` und die zu verwendende `dialogFunction` übergeben werden,  
 falls diese Angaben vom Standard abweichen sollen.
@@ -107,3 +107,45 @@ Das Ergebnis ist gleich wie bei der normalen Verarbeitung.
 
 Da kein Lade-Popup angezeigt wird, sollte der Prozess/Dialog in diesem Fall selbst sicher stellen,  
 dass die parallelen, asynchronen Anfragen an QuickDocs zum gewünschten Ergebnis führen.
+
+## Vorlagenverwaltung
+
+Siehe [📄 Verwendung und Funktionen der REST-API > Vorlagenverwaltung](api.md#vorlagenverwaltung).
+
+Per REST-API können Vorlagen aus Prozessen aufgelistet, gelöscht, heruntergeladen, hochgeladen und inspiziert werden.
+Zusätzlich zum direkten Verwenden von .docx-Dateien ist auch die Nutzung von Base64-Strings (für `jr_execute_dialog_function`) möglich.
+
+Besondere Voraussetzungen gibt es keine, an beliebiger Stelle in Prozessen wird die die QuickDocs-PHP-Dialogfunktion angestoßen und das Ergebnis verarbeitet.
+
+Beispiele:
+
+```js
+QuickDocs.downloadTemplateNames(
+    (response) => console.log(response.result.names) // Success-Handler mit den Namen aller Vorlagen als String-Array
+);
+
+QuickDocs.downloadTemplate(
+    'orderPdf', // Name des FILE-Elements im Dialog, welches das Dokument abspeichert
+    'Auftrag.pdf', // Name der Ergebnis-Datei
+    'Auftragsvorlage' // Name der Vorlage auf dem Server
+);
+
+QuickDocs.uploadTemplate(
+    'orderPdf', // Name des FILE-Elements im Dialog, welches das Dokument enthält
+    'Auftragsvorlage', // Name der (neuen) Vorlage auf dem Server
+    false // False (Standard) = Überschreibt bestehende Vorlagen nicht | True = Überschreibt bestehende Vorlagen.
+);
+
+QuickDocs.deleteTemplate(
+    'Auftragsvorlage' // Name der Vorlage auf dem Server
+);
+
+QuickDocs.inspectTemplate(
+    'Auftragsvorlage' // Name der Vorlage auf dem Server
+    (response) => console.log(response.result.data) // Success-Handler, mit dem Ergebnis der Inspektion als (JSON) Objekt
+);
+
+```
+
+Zusätzlich kann auch der jeweilige `successCallback`, der `errorCallback` und die zu verwendende `dialogFunction` übergeben werden,  
+falls diese Angaben vom Standard abweichen sollen.
