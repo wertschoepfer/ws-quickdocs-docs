@@ -114,7 +114,9 @@ Die genauen Endpunkte und Dokumentation dazu sind im Swagger zu finden.
 
 ## Dokumentenverarbeitung
 
-Endpunkt: `POST /process/mapping/<output-type>`
+Endpunkt: `POST /process/mapping/<output-type>?templateName=`
+
+Die Dokumentvorlage wird im Argument `templateName` angegeben, es wird der Dateiname ohne Endung erwartet. Beispiel: `WS`.
 
 Das Mapping muss als JSON (`application/json`) im Body mitgeschickt werden. Unten steht ein einfaches Beispiel mit Informationen zu den Eigenschaften.
 
@@ -222,7 +224,9 @@ Reihenfolge der Verarbeitung (für komplexere Kombinationen):
 
 ### Alternative ohne Mapping
 
-Endpunkt: `POST /process/content/<output-type>`
+Endpunkt: `POST /process/content/<output-type>?templateName=`
+
+Die Dokumentvorlage wird im Argument `templateName` angegeben, es wird der Dateiname ohne Endung erwartet. Beispiel: `WS-Brief`.
 
 Anstelle eines Mappings wird direkt XHTML-Content (`text/plain`) im Body erwartet. Der Inhalt wird dann direkt in die Wordvorlage eingefügt.
 
@@ -235,45 +239,14 @@ Bei der Verarbeitung kann abhängig vom gewählten Endpunkt auch das Ausgabeform
 
 ## Vorlagenverwaltung
 
-Endpunkte: `GET /template/...`
+Die Dokumentvorlagen müssen auf dem Server, auf dem QuickDocs läuft, abgelegt sein und werden bei den jeweiligen Aktionen per Dateiname ausgewählt.  
+Aktuell ist keine Verwaltung ohne Zugriff zum Server möglich.
 
-Die Vorlagenverwaltung ist eine Gruppe von API-Endpunkten zum Auflisten, Löschen, Herunterladen, Hochladen und für die Inspektion von Word-Vorlagen.  
-Zusätzlich zum direkten Verwenden von .docx-Dateien ist auch die Nutzung von Base64-Strings möglich.  
-Alternativ können Vorlagen administrativ direkt auf dem QuickDocs Server im Vorlagenordner verwaltet werden.
+### Inspektion
 
-### Liste aller Namen vorhandener Vorlagen abrufen
+Endpunkt: `GET /template/inspect/?templateName=`
 
-**Endpunkt:** `GET /template/names`
-
-Beispielausgabe:
-
-```json
-["WS", "WS-Brief"]
-```
-
-### Vorlage als Word-Datei herunterladen
-
-**Endpunkt:** `GET /template/file/word`
-
-### Vorlage als Base64-String herunterladen
-
-**Endpunkt:** `GET /template/file/word-base64`
-
-### Bestehende Vorlage auf dem Server löschen
-
-**Endpunkt:** `DELETE /template/file`
-
-### Vorlage als Word-Datei hochladen
-
-**Endpunkt:** `POST /template/file/word`
-
-### Vorlage als Base64-String hochladen
-
-**Endpunkt:** `POST /template/file/word-base64`
-
-### Vorlage inspizieren
-
-Endpunkt: `GET /template/inspect`
+Die Dokumentvorlage wird im Argument `templateName` angegeben, es wird der Dateiname ohne Endung erwartet. Beispiel: `WS`.
 
 Gibt folgende Informationen als Beispiel zurück:
 
@@ -363,3 +336,5 @@ Gibt folgende Informationen als Beispiel zurück:
     }
 }
 ```
+
+<!-- TODO: Dokumentation Vorlagenverwaltung -->
