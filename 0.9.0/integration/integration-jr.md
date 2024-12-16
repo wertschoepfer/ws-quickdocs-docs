@@ -141,10 +141,9 @@ QuickDocs.deleteTemplate(
 );
 
 QuickDocs.inspectTemplate(
-    'Auftragsvorlage' // Name der Vorlage auf dem Server
+    'Auftragsvorlage', // Name der Vorlage auf dem Server
     (response) => console.log(response.result.data) // Success-Handler, mit dem Ergebnis der Inspektion als (JSON) Objekt
 );
-
 ```
 
 Zusätzlich kann auch der jeweilige `successCallback`, der `errorCallback` und die zu verwendende `dialogFunction` übergeben werden,  

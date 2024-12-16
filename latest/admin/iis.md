@@ -170,6 +170,19 @@ Zum Testen ohne IIS kann auch direkt `C:\inetpub\wwwroot\quickdocs\WS.QuickDocs.
 -   Der Server läuft direkt auf http://localhost:5000.
 -   Der Server läuft so lange das Fenster offen ist.
 
+### Warnungen beim Starten
+
+Üblicherweise werden beim Starten von QuickDocs 3 Warnungen ausgegeben (sowohl in der Konsole, als auch im Log).  
+Die Meldungen sind nicht relevant für die Ausführung von QuickDocs und können ignoriert werden.
+
+**Beispiel:**
+
+```
+Using an in-memory repository. Keys will not be persisted to storage.
+Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
+No XML encryptor configured. Key {5f265c52-903c-4ba8-8bbd-a278da0683e9} may be persisted to storage in unencrypted form.
+```
+
 ## Update
 
 ⚠️ Beim Update werden alle Dateien von QuickDocs im Installationsverzeichnis ersetzt.  

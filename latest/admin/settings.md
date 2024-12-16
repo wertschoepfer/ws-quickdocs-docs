@@ -14,6 +14,8 @@ Da QuickDocs eine ASP\.NET Anwendung ist, sind Standard ASP\.NET / \.NET Umgebun
 -   [🌐 Konfiguration der Garbage Collection](https://learn.microsoft.com/en-us/dotnet/core/runtime-config/garbage-collector)
 -   [🌐 Konfiguration des ASP\.NET Hosts](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/host/web-host?view=aspnetcore-8.0#host-configuration-values)
 
+❗ Änderungen an Windows-System-/Benutzer-Umgebungsvariblen werden nur nach einem **Neustart von IIS** wirksam. Für dies in PowerShell als Admin `iisreset /restart` ausführen.
+
 Für QuickDocs sind vorallem folgende Umgebungsvariablen entscheidend:
 
 -   `SYNCFUSION_LICENSE_KEY`
