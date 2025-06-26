@@ -6,14 +6,15 @@ Bei Fragen, Problemen oder Anregungen zur Dokumentation kommen Sie gerne direkt 
 **Aktuelle Version**
 
 | Administration                      | Integration                               | Hinweise |
-| ----------------------------------- | ----------------------------------------- |----------|
+| ----------------------------------- | ----------------------------------------- | -------- |
 | [📗 Öffnen](./latest/admin/_toc.md) | [📘 Öffnen](./latest/integration/_toc.md) | keine    |
 
 **Alle Versionen**
 Versionen &lt; 1 sind sog. Alpha-Versionen. Die Dokumentation zu diesen ist ggf. nicht vollständig vorhanden.
 
 | Version | Von            | Administration                       | Integration                                | Hinweise |
-|---------|----------------|--------------------------------------|--------------------------------------------|----------|
+| ------- | -------------- | ------------------------------------ | ------------------------------------------ | -------- |
+| 1.5.0   | Juni 2025      | [📗 Öffnen](./1.5.0/admin/_toc.md)   | [📘 Öffnen](./1.5.0/integration/_toc.md)   | keine    |
 | 1.0.0   | Januar 2025    | [📗 Öffnen](./1.0.0/admin/_toc.md)   | [📘 Öffnen](./1.0.0/integration/_toc.md)   | keine    |
 | 0.9.0   | Dezember 2024  | [📗 Öffnen](./0.9.0/admin/_toc.md)   | [📘 Öffnen](./0.9.0/integration/_toc.md)   | keine    |
 | 0.8.0   | Oktober 2024   | [📗 Öffnen](./0.8.0/admin/_toc.md)   | [📘 Öffnen](./0.8.0/integration/_toc.md)   | keine    |
