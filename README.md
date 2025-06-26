@@ -5,9 +5,9 @@ Bei Fragen, Problemen oder Anregungen zur Dokumentation kommen Sie gerne direkt 
 
 **Aktuelle Version**
 
-| Administration                      | Integration                               | Hinweise |
-| ----------------------------------- | ----------------------------------------- | -------- |
-| [📗 Öffnen](./latest/admin/_toc.md) | [📘 Öffnen](./latest/integration/_toc.md) | keine    |
+| Administration                      | Integration                               |
+| ----------------------------------- | ----------------------------------------- |
+| [📗 Öffnen](./latest/admin/_toc.md) | [📘 Öffnen](./latest/integration/_toc.md) |
 
 **Alle Versionen**
 Versionen &lt; 1 sind sog. Alpha-Versionen. Die Dokumentation zu diesen ist ggf. nicht vollständig vorhanden.
