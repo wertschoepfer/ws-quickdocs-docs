@@ -14,6 +14,7 @@ Versionen &lt; 1 sind sog. Alpha-Versionen. Die Dokumentation zu diesen ist ggf.
 
 | Version | Von            | Administration                       | Integration                                |
 | ------- | -------------- | ------------------------------------ | ------------------------------------------ |
+| 1.6.0   | August 2025    | [📗 Öffnen](./1.6.0/admin/_toc.md)   | [📘 Öffnen](./1.6.0/integration/_toc.md)   |
 | 1.5.0   | Juni 2025      | [📗 Öffnen](./1.5.0/admin/_toc.md)   | [📘 Öffnen](./1.5.0/integration/_toc.md)   |
 | 1.0.0   | Januar 2025    | [📗 Öffnen](./1.0.0/admin/_toc.md)   | [📘 Öffnen](./1.0.0/integration/_toc.md)   |
 | 0.9.0   | Dezember 2024  | [📗 Öffnen](./0.9.0/admin/_toc.md)   | [📘 Öffnen](./0.9.0/integration/_toc.md)   |
