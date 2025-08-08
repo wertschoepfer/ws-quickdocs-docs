@@ -8,7 +8,7 @@ Für manche Prozesse möchte man aber die Vorlagen-Dokumente andersweitig (Archi
 Diese Dokumente muss man dann für die Verarbeitung mitschicken - aber wie?
 
 **Antwort:**
-Bei der Verarbeitung von Dokumenten kann man im Mapping noch sog. "Options" mitschicken. Hier gibt es eine Option namnes "ReplacmeentTemplate". Hier kann man einfach den Dateiinhalt in Base64 kodiert eintragen und mitschicken.
+Bei der Verarbeitung von Dokumenten kann man im Mapping noch sog. "Options" mitschicken. Hier gibt es eine Option namnes "ReplacementTemplate". Hier kann man einfach den Dateiinhalt in Base64 kodiert eintragen und mitschicken.
 
 Wichtig: Diese Vorgehensweise wird nicht auf Dauer empfohlen, da hierdurch der Request wesentlich größer ist (die komplette Vorlage wird jedes Mal mitgeschickt). Stattdessen sollten die Vorlagen auf dem Server liegen.
 
